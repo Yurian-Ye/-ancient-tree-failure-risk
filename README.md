@@ -74,11 +74,23 @@ Sobol 全局敏感性（Saltelli 估计量，16384 次模型调用）：
 
 ## 图
 
-| 文件 | 内容 |
-|---|---|
-| `figures/fig1_sf_cdf.png` | 20000 组工况的安全系数累积分布 |
-| `figures/fig2_scour_vs_sf.png` | 安全系数随树基冲刷深度的变化，标出临界深度 |
-| `figures/fig3_sobol.png` | Sobol 一阶与总效应指数 |
+### 安全系数随树基冲刷深度的变化
+
+其余参数取中位，只改冲刷深度。三条线对应三种偏冠率。冲刷超过约 1.6 m，安全系数跌破 1.0。
+
+![安全系数随树基冲刷深度的变化](figures/fig2_scour_vs_sf.png)
+
+### 20000 组工况的安全系数累积分布
+
+对数横轴。约 13.7% 的工况低于 1.0，81.1% 高于 1.5。
+
+![安全系数累积分布](figures/fig1_sf_cdf.png)
+
+### Sobol 全局敏感性
+
+一阶效应 S1 与总效应 ST 并排。根系与土体四项排在前面，风速第二。
+
+![Sobol 敏感性](figures/fig3_sobol.png)
 
 `figures/metrics.json` 是代码输出的全部数字，README 与图中每个数都能在这里对上。
 
